@@ -1,5 +1,4 @@
 import sys
-import getopt
 import threading
 import time
 import tkinter as tki
@@ -8,7 +7,7 @@ from typing import Any, Optional, List, Tuple, Dict
 import argparse
 from argparse import Namespace
 
-import game_utils
+import utils
 
 CELL_SIZE = 15
 ROUND_TIME = 100
@@ -24,7 +23,7 @@ class GameDisplay:
         """Creates a new game display object and initializes it"""
         # placed this import in here to solve circular import issues.
         self.width, self.height, self.delay, self.verbose = width, height, delay/1000, verbose > 1
-        import snake_main
+        import main
         self._round_num = 0
         self._root = tki.Tk()
         self._root.title('Snake')
@@ -45,7 +44,7 @@ class GameDisplay:
         self._key_click_round: int = 0
 
         self._game_control_thread = threading.Thread(
-            target=snake_main.main_loop, args=(self, args))
+            target=main.main_loop, args=(self, args))
         self._game_control_thread.daemon = True
         self._round_start_time = time.time()
 
@@ -189,7 +188,7 @@ class GameDisplay:
 
 def parse_args(argv: List[str]) -> Namespace:
     parser = argparse.ArgumentParser(
-        prog='game_display.py',
+        prog='display.py',
         description='Runs snake game',
     )
     parser.add_argument('-x', '--width', type=int, default=WIDTH,
@@ -216,9 +215,9 @@ def parse_args(argv: List[str]) -> Namespace:
 
 
 def setup_game(args: Namespace) -> GameDisplay:
-    game_utils.set_random_seed(args.__dict__.pop('seed'))
-    game_utils.set_verbose(args.verbose)
-    game_utils.set_size(width=args.width,
+    utils.set_random_seed(args.__dict__.pop('seed'))
+    utils.set_verbose(args.verbose)
+    utils.set_size(width=args.width,
                         height=args.height)
     return GameDisplay(width=args.width,
                        height=args.height,
