@@ -1,7 +1,6 @@
 # Snake Game
 
-An interactive Boggle word game built in Python.
-The player searches for valid words on a randomized board of letters before the timer runs out. Words are validated against a dictionary, and the score updates dynamically as you play.
+An interactive Snake game built in Python. The player controls a snake that moves around the board, eating apples to grow longer while avoiding collisions with walls or itself. Each apple eaten increases the score. The game continues until the snake crashes.
 
 <p float="left">
   <img src="images/screenshot1.jpeg" width="400" height="300"/>
@@ -13,5 +12,3 @@ The player searches for valid words on a randomized board of letters before the 
 - Use the **arrow keys** (↑ ↓ ← →) to control the snake’s movement.  
 - Eat the **green apples** to grow longer and increase your score.  
 - Avoid running into the **walls** or into the snake’s own body — doing so ends the game.  
-- The game gets harder as the snake grows longer and space becomes tighter.  
-- Press **Play/Restart** to start a new round.  
