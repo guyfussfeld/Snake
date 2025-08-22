@@ -10,8 +10,8 @@ The player searches for valid words on a randomized board of letters before the 
 
 ## 🎮 How to Play
 
-- When the game starts, a **random board of letters** is generated.  
-- Click **adjacent** letters to form words. 
-- **Valid** words will appear in the list on the right, and your **score** updates.  
-- You have a limited amount of **time** to find as many words as possible.  
-- Press **Play** restart the game. 
+- Use the **arrow keys** (↑ ↓ ← →) to control the snake’s movement.  
+- Eat the **green apples** to grow longer and increase your score.  
+- Avoid running into the **walls** or into the snake’s own body — doing so ends the game.  
+- The game gets harder as the snake grows longer and space becomes tighter.  
+- Press **Play/Restart** to start a new round.  
