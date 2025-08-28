@@ -11,4 +11,4 @@ An interactive Snake game built in Python.
 
 - Use the **arrow keys** (↑ ↓ ← →) to control the snake’s movement.  
 - Eat the **green apples** to grow longer and increase your score.  
-- Avoid running into the **walls** or into the **snake’s own body** — doing so ends the game.  
+- Avoid running into the **walls**, into the **snake’s own body** or get hit in the head by the **enemy snake** — doing so ends the game.  
